@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#162321"><title>Midtown Dispatch — Fixed Gear Courier</title><style>*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#162a2b;color:#f7efdf;font-family:Arial,Helvetica,sans-serif}#world{position:fixed;inset:0}#world canvas{display:block;width:100%;height:100%}button,select{font:inherit;cursor:pointer;color:inherit}button:focus-visible,select:focus-visible{outline:3px solid #efb975;outline-offset:3px}button{background:#172b2ae8;border:1px solid #bacdb44d;border-radius:4px;padding:10px 14px}header{position:absolute;top:25px;left:30px;right:30px;display:flex;justify-content:space-between;align-items:center;pointer-events:none}.brand{display:flex;align-items:center;gap:12px;font-size:33px;font-weight:900;letter-spacing:-3px;text-shadow:0 2px 8px #0005}.brand span{font-size:11px;line-height:1.3;letter-spacing:1.5px}.brand small{font-size:9px;letter-spacing:2px;border-left:1px solid #efe6d34d;padding:8px 16px;color:#eac08b}nav{display:flex;gap:8px;pointer-events:auto}nav button{font-size:12px}.panel{position:absolute;left:30px;top:104px;width:256px;background:#142b2aed;border-left:3px solid #e2af72;padding:19px 20px;border-radius:3px}.eyebrow{font-size:10px;font-weight:bold;letter-spacing:2px;color:#e9ba7f}h2{font-size:24px;letter-spacing:-.8px;margin:11px 0 8px}.panel p{font-size:12px;color:#bbc9c1;line-height:1.5;margin:0}.jobmeta{display:flex;align-items:baseline;justify-content:space-between;margin-top:18px}.jobmeta strong{font-size:36px;letter-spacing:-1.5px;font-variant-numeric:tabular-nums}.jobmeta span{font-size:10px;color:#bbc9c1}.urgent{color:#ff997e}#toast{position:absolute;left:50%;top:95px;transform:translateX(-50%);max-width:500px;text-align:center;padding:12px 18px;font-size:13px;line-height:1.5;background:#172c2bef;border:1px solid #e7bc7955;border-radius:4px;opacity:0;transition:opacity .2s;pointer-events:none}#toast.visible{opacity:1}#mapPanel{position:absolute;right:30px;bottom:77px;width:190px;background:#142a29f0;padding:12px;border:1px solid #d7ddbc26;border-radius:4px}.maphead,.mapfoot{display:flex;align-items:center;justify-content:space-between;font-size:8px;letter-spacing:1px}.maphead span{color:#b4f0d6}#map{width:100%;height:auto;display:block}.mapfoot{font-size:7px;letter-spacing:.1px}.mapfoot i{height:5px;width:5px;background:#b4f0d6;border-radius:50%;margin-right:4px}.mapfoot span{margin-left:auto;color:#dfb274}#speed{position:absolute;bottom:84px;left:32px;text-shadow:0 2px 7px #18272499}#speed strong{font-size:69px;font-weight:500;letter-spacing:-4px;line-height:1}#speed span{font-size:11px;padding-left:12px;color:#eee2cc}#rideState{font-size:10px;letter-spacing:1.5px;margin-top:8px}.stamina{width:140px;height:3px;background:#ffffff30;margin:12px 0}.stamina i{display:block;height:3px;background:#d8b178;width:100%}#completed{font-size:9px;letter-spacing:1.5px;color:#c2dbcd}footer{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;gap:15px;background:#132625f2;padding:16px 25px;font-size:10px;color:#bdccc3}kbd{font:inherit;color:#f7ecdb;border:1px solid #a7b3a840;border-radius:3px;padding:2px 4px;margin-left:5px}#prompt{position:absolute;bottom:160px;left:50%;transform:translateX(-50%);padding:14px 24px;background:#b4f0d6;color:#142a25;font-size:14px;font-weight:bold;border-radius:4px;display:none}#overlay,#result{position:absolute;inset:0;display:flex;align-items:center;overflow:auto;padding:45px 7%;background:linear-gradient(90deg,#112625fc 0%,#112625f2 34%,#11262588 65%,#11262522)}.start{max-width:490px}h1{font-size:clamp(42px,5.5vw,77px);line-height:.94;letter-spacing:-4px;margin:23px 0}h1 em{color:#e8bc84;font-style:normal}.intro{font-size:17px;line-height:1.5;color:#d7dfd6}.brief{border-top:1px solid #d4dabc30;border-bottom:1px solid #d4dabc30;padding:18px 0;display:grid;gap:16px;margin:20px 0}.brief b{display:block;font-size:9px;letter-spacing:1.5px;color:#edc08a;margin-bottom:6px}.brief span{font-size:13px;line-height:1.5;color:#c2d0c6}.start label{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:10px;letter-spacing:1.5px}select{font-size:12px;background:#263d36;padding:9px;border:1px solid #b6c7ac55;border-radius:3px;letter-spacing:0}.primary{background:#e5b47b;color:#142b28;width:100%;border:0;padding:16px 18px;margin-top:16px;text-align:left;font-weight:bold;font-size:15px}.primary span{float:right}.secondary{background:transparent;width:100%;margin-top:10px;font-size:12px}.note{font-size:10px;color:#99b4a5;letter-spacing:1px;line-height:1.5}#error{font-size:13px;color:#ffac86}#result{justify-content:center;background:#102525ee}.resultCard{max-width:550px;width:100%}.resultCard h1{font-size:58px;color:#e8bc84}.stats{display:grid;grid-template-columns:1fr 1fr;gap:23px;padding:24px 0;border-top:1px solid #d4dabc30;border-bottom:1px solid #d4dabc30}.stats strong{display:block;font-size:32px}.stats span{font-size:9px;letter-spacing:1.5px;color:#a9c0b4}.hidden{display:none!important}@media(max-width:900px){header{left:18px;right:18px;top:17px}.brand small{display:none}.panel{left:18px;top:80px;width:215px;padding:14px}h2{font-size:21px}#mapPanel{right:18px;width:158px}footer{flex-wrap:wrap;justify-content:center;padding:10px}.start{max-width:420px}#toast{top:78px;left:60%;max-width:330px;width:40%}#speed{left:20px}.intro{font-size:15px}}@media(max-height:740px){#overlay,#result{padding:25px 6%}h1{font-size:46px;margin:16px 0}.brief{gap:9px;margin:13px 0;padding:12px 0}.intro{font-size:14px}.primary{padding:12px 16px;margin-top:12px}.brief span{font-size:12px}.note{margin:9px 0}#mapPanel{width:150px}.panel{top:85px}.resultCard h1{font-size:40px}}
-</style></head><body><div id="world"></div><header><div class="brand">MD<span>MIDTOWN<br>DISPATCH</span><small>LIVING STREETS / 08</small></div><nav><button id="sound" aria-pressed="false">Sound on</button><button id="pause">Pause</button></nav></header>
+</style></head><body><div id="world"></div><header><div class="brand">MD<span>MIDTOWN<br>DISPATCH</span><small>LIVING STREETS / 09</small></div><nav><button id="sound" aria-pressed="false">Sound on</button><button id="pause">Pause</button></nav></header>
 <section id="job" class="panel"><div class="eyebrow" id="jobLabel">RUSH / PHOTO PROOFS</div><h2 id="destination">The Meridian</h2><p id="instruction">Your bag is loaded. Stage door on West 43rd.</p><div class="jobmeta"><strong id="timer">120s</strong><span id="distance">Stage door</span></div></section>
 <div id="toast" role="status"></div><aside id="mapPanel"><div class="maphead">THE NEIGHBORHOOD <span>N ↑</span></div><canvas id="map" width="220" height="220" aria-label="Map: dashed avenue route and gold service-lane shortcut"></canvas><div class="mapfoot"><i></i> STAGE DOOR <span>GOLD = SHORTCUT</span></div></aside>
 <div id="speed"><div><strong id="mph">0</strong><span>MPH</span></div><div id="rideState">48 × 17 / FIXED</div><div class="stamina"><i id="stamina"></i></div><div id="completed">0 CLEAN SLIDES</div></div><div id="prompt"></div>
@@ -135,7 +135,7 @@ for(const x of[-.84,.84]){box(x,1.05,-3.52,.35,.2,.04,0xffedba,g);box(x,1,3.47,.
 const traffic=[];for(let i=0;i<264;i++){const vertical=i<168,k=vertical?i:i-168,dir=vertical?-1:(k%2?1:-1),lane=vertical?avenues[k%2]+[-.2,3.5,6.8][Math.floor(k/2)%3]:streets[1+Math.floor(k/2)%3]+dir*3.6;const truck=i%11===4,g=truck?boxTruck():car([0xc59a28,0x77838a,0x3f4c55,0x963e30][i%4]);g.rotation.y=vertical?0:(dir===1?-Math.PI/2:Math.PI/2);scene.add(g);const spawn=vertical?200-Math.floor(k/6)*12-(Math.floor(k/2)%3)*1.5:-191+Math.floor(k/6)*14;
 traffic.push({g,id:i,baseVertical:vertical,baseDir:dir,vertical,dir,lane,baseLane:lane,spawn,pos:spawn,speed:6.5+(i%4)*.75,velocity:0});}
 for(const x of[-160,0])for(const z of[-70,-52,-34,-16,25,43,61,115,133,151,198]){const g=Math.abs(z)%3===1?boxTruck(0xbcc1b6):car(0x909b9e);g.position.set(x-10,0,z);scene.add(g);traffic.push({g,vertical:true,dir:-1,lane:x-10,pos:z,speed:0,velocity:0,parked:true});}
-const peds=[];for(let i=0;i<320;i++){const g=new T.Group();box(0,1.1,0,.4,.65,.27,[0x3e4f5c,0x776b57,0x3f4d40,0x876151][i%4],g);const head=new T.Mesh(new T.SphereGeometry(.17,10,8),mat([0xc39b7c,0x997151,0xd7b799][i%3]));head.position.y=1.65;g.add(head);const a=box(-.11,.46,0,.13,.65,.16,0x303a42,g),b=box(.11,.46,0,.13,.65,.16,0x303a42,g);line([-.23,1.38,0],[-.28,.78,.04],.06,0x776b57,g);line([.23,1.38,0],[.28,.78,.04],.06,0x776b57,g);scene.add(g);peds.push({g,a,b,x:avenues[Math.floor(i/2)%2]+(i%2?1:-1)*(13.5+(Math.floor(i/4)%3)*.85),z:-210+rnd()*420,dir:i%2?1:-1,phase:rnd()*6,cross:i%3===0,axis:i%2,avenue:avenues[Math.floor(i/6)%2],street:streets[1+Math.floor(i/12)%3],progress:(i%2?1:-1)*15.2,offset:(Math.floor(i/12)%5-2)*.55,walking:false});}
+const peds=[];for(let i=0;i<320;i++){const g=new T.Group();box(0,1.1,0,.4,.65,.27,[0x3e4f5c,0x776b57,0x3f4d40,0x876151][i%4],g);const head=new T.Mesh(new T.SphereGeometry(.17,10,8),mat([0xc39b7c,0x997151,0xd7b799][i%3]));head.position.y=1.65;g.add(head);const a=box(-.11,.46,0,.13,.65,.16,0x303a42,g),b=box(.11,.46,0,.13,.65,.16,0x303a42,g);line([-.23,1.38,0],[-.28,.78,.04],.06,0x776b57,g);line([.23,1.38,0],[.28,.78,.04],.06,0x776b57,g);scene.add(g);peds.push({g,a,b,x:avenues[Math.floor(i/2)%2]+(i%2?1:-1)*(13.5+(Math.floor(i/4)%3)*.85),z:-210+rnd()*420,dir:i%2?1:-1,phase:rnd()*6,cross:i%3===0,axis:i%2,avenue:avenues[Math.floor(i/6)%2],street:streets[1+Math.floor(i/12)%3],progress:(i%2?1:-1)*15.2,offset:(Math.floor(i/12)%5-2)*.9,walking:false});}
 // A turning cab and a loading van create readable, repeatable encounters.
 const cab=car(0xc59a28);scene.add(cab);
 const indicatorMat=new T.MeshBasicMaterial({color:0x6d512d});for(const z of[-2.2,2.2]){const lamp=new T.Mesh(new T.BoxGeometry(.18,.17,.04),indicatorMat);lamp.position.set(-.7,.75,z);cab.add(lamp);}
@@ -221,7 +221,8 @@ function clearInput(){Object.keys(keys).forEach(k=>keys[k]=false);dragging=false
 function reset(free=false){document.activeElement?.blur();practice=free;practiceCourse.visible=free;px=free?-15:5;pz=free?180:168;heading=free?Math.PI/2:0;travelHeading=heading;sideView=false;slip=0;speed=0;stamina=100;time=120;crashes=0;elapsed=0;finished=false;cooldown=0;cleanSlides=0;nearMisses=0;steerSmooth=0;yawRate=0;recovering=0;slideActive=false;slideAge=0;slideEntrySpeed=0;rearGrip=1;slideSettle=0;frontSteerAngle=0;slideCooldown=0;slideNeedsRelease=false;launchAge=-1;driveEffort=0;restBlend=1;sprintBlend=0;skidPose=0;pedal=-Math.PI*.75;skidDistance=0;skidTotal=0;markLast=null;routeHint=0;impactShake=0;nearSeen.clear();lastSafe={x:px,z:pz};viewYaw=0;viewPitch=.1;clearInput();
  for(let i=0;i<420;i++){effectObj.scale.setScalar(0);effectObj.updateMatrix();skidMarks.setMatrixAt(i,effectObj.matrix);}skidMarks.instanceMatrix.needsUpdate=true;smoke.forEach(p=>{p.life=0;p.m.visible=false;});
  traffic.forEach((c,i)=>{if(!c.parked){c.vertical=c.baseVertical;c.dir=c.baseDir;c.turn=null;c.turns=0;c.lastJunction=null;c.pos=c.spawn;c.lane=c.baseLane;c.velocity=0;c.mergeTo=null;c.reason="FLOW";}});peds.forEach((p,i)=>{p.progress=(i%2?1:-1)*15.2;p.dir=i%2?1:-1;p.z=-100+(i*31%300);});
- $('jobLabel').textContent=free?'RIDING PRACTICE / 08':'RUSH / PHOTO PROOFS';$('destination').textContent=free?'Feel the difference':'The Meridian';$('instruction').textContent=free?'W: seated pedal. Shift + W: stand and sprint. At the orange ring, Space + A/D: slide; release to catch. V: side view. P: reset.':'Your bag is loaded. Stage door on West 43rd.';$('completed').textContent='0 CLEAN SLIDES';$('pause').textContent='Pause';$('overlay').classList.add('hidden');$('result').classList.add('hidden');$('prompt').style.display='none';started=true;running=true;initAudio();toast(free?'W to ride · Shift to stand · V for side view':'Bag loaded · choose the avenue or service lane');
+ streetReady=false;updateStreet(0);
+ $('jobLabel').textContent=free?'RIDING PRACTICE / 09':'RUSH / PHOTO PROOFS';$('destination').textContent=free?'Feel the difference':'The Meridian';$('instruction').textContent=free?'W: seated pedal. Shift + W: stand and sprint. At the orange ring, Space + A/D: slide; release to catch. V: side view. P: reset.':'Your bag is loaded. Stage door on West 43rd.';$('completed').textContent='0 CLEAN SLIDES';$('pause').textContent='Pause';$('overlay').classList.add('hidden');$('result').classList.add('hidden');$('prompt').style.display='none';started=true;running=true;initAudio();toast(free?'W to ride · Shift to stand · V for side view':'Bag loaded · choose the avenue or service lane');
 }
 function pause(){if(!started||finished)return;running=!running;clearInput();silence();$('overlay').classList.toggle('hidden',running);$('introContent').classList.toggle('hidden',!running);$('pauseContent').classList.toggle('hidden',running);$('pause').textContent=running?'Pause':'Resume';document.activeElement?.blur();if(running){$('introContent').classList.remove('hidden');$('pauseContent').classList.add('hidden');}}
 function startRun(free=false){$('introContent').classList.remove('hidden');$('pauseContent').classList.add('hidden');reset(free);}
@@ -254,23 +255,26 @@ const x=(1-u)*(1-u)*t.p0.x+2*(1-u)*u*t.p1.x+u*u*t.p2.x,z=(1-u)*(1-u)*t.p0.y+2*(1
 const dx=2*(1-u)*(t.p1.x-t.p0.x)+2*u*(t.p2.x-t.p1.x),dz=2*(1-u)*(t.p1.y-t.p0.y)+2*u*(t.p2.y-t.p1.y);
 c.g.position.set(x,0,z);c.g.rotation.y=Math.atan2(-dx,-dz);c.reason=blocked?'TURN YIELD':'TURNING';
 if(u===1){c.vertical=t.outVertical;c.dir=t.outDir;c.lane=t.outLane;c.pos=c.vertical?z:x;c.lastJunction=t.key;c.turns=(c.turns||0)+1;c.turn=null;}}
-function updateStreet(dt){
+function proposeStreet(dt){
  lights.forEach(l=>{const q=signalAt(l.x,l.z),state=l.vertical?q.vertical:q.horizontal;l.bulbs.forEach((index,i)=>lampMesh.setColorAt(index,lampColors[state===['red','amber','green'][i]?i:3]));l.walk.material=(l.vertical?q.walkV:q.walkH)?walkMaterials.go:walkMaterials.wait;});
  lampMesh.instanceColor.needsUpdate=true;
  const movers=traffic.filter(c=>!c.parked),snap=traffic.map(c=>({c,pos:c.pos,lane:c.lane,v:c.velocity||0,half:c.g.userData.halfLength||2.2,width:c.g.userData.halfWidth||.9}));
+ const laneBins=[new Map(),new Map()];for(const o of snap){const bins=laneBins[+o.c.vertical],key=Math.floor(o.lane/4);if(!bins.has(key))bins.set(key,[]);bins.get(key).push(o);}
+ const laneNeighbors=(vertical,lane,radius)=>{const out=[],bins=laneBins[+vertical];for(let k=Math.floor((lane-radius)/4);k<=Math.floor((lane+radius)/4);k++)if(bins.has(k))out.push(...bins.get(k));return out;};
+ const crossingPeds=peds.filter(p=>p.cross&&p.walking);
  for(const c of movers){if(c.turn){moveTurn(c,dt);continue;}const half=c.g.userData.halfLength||2.2,width=c.g.userData.halfWidth||.9,v=c.velocity,acc=half>3?.9:1.5,headway=half>3?1.5:1.05;
- let gap=1000,leadV=c.speed,reason='FLOW';
+ const sameLane=laneNeighbors(c.vertical,c.lane,width+1.5+.3);let gap=1000,leadV=c.speed,reason='FLOW';
  const limit=(g,vv,why)=>{if(g<gap){gap=g;leadV=vv;reason=why;}};
- for(const o of snap){if(o.c===c||o.c.vertical!==c.vertical||Math.abs(o.lane-c.lane)>=width+o.width+.15)continue;const d=(o.pos-c.pos)*c.dir;if(d>0)limit(d-half-o.half,o.c.dir===c.dir?o.v:0,'QUEUE');}
+ for(const o of sameLane){if(o.c===c||o.c.vertical!==c.vertical||Math.abs(o.lane-c.lane)>=width+o.width+.15)continue;const d=(o.pos-c.pos)*c.dir;if(d>0)limit(d-half-o.half,o.c.dir===c.dir?o.v:0,'QUEUE');}
  const intersections=c.vertical?streets:avenues;
  for(const j of intersections){const d=(j-c.pos)*c.dir,stopGap=d-16-half;if(stopGap<-.15||d>85)continue;const q=signalAt(c.vertical?c.lane:j,c.vertical?j:c.lane),light=c.vertical?q.vertical:q.horizontal;
  const canStop=v*v/(2*2.8)+1<stopGap;
  if(light==='red'||light==='amber'&&canStop)limit(stopGap,0,'SIGNAL');
- const blocked=snap.some(o=>o.c!==c&&o.c.vertical===c.vertical&&Math.abs(o.lane-c.lane)<width+o.width+.15&&(o.pos-j)*c.dir>0&&(o.pos-j)*c.dir<16+half*2+o.half+2&&o.v<2);
+ const blocked=sameLane.some(o=>o.c!==c&&o.c.vertical===c.vertical&&Math.abs(o.lane-c.lane)<width+o.width+.15&&(o.pos-j)*c.dir>0&&(o.pos-j)*c.dir<16+half*2+o.half+2&&o.v<2);
  if(blocked)limit(stopGap,0,'BLOCKED JUNCTION');
- const occupied=snap.some(o=>o.c.vertical!==c.vertical&&Math.abs(o.pos-c.lane)<o.half+width+1&&Math.abs(o.lane-j)<16);
+ const occupied=laneNeighbors(!c.vertical,j,16).some(o=>o.c.vertical!==c.vertical&&Math.abs(o.pos-c.lane)<o.half+width+1&&Math.abs(o.lane-j)<16);
  if(occupied)limit(stopGap,0,'CROSS TRAFFIC');if(movers.some(o=>o!==c&&o.turn&&Math.abs((c.vertical?o.turn.z:o.turn.x)-j)<1&&Math.abs((c.vertical?o.turn.x:o.turn.z)-c.lane)<18))limit(stopGap,0,'TURN CLEARANCE');}
- for(const p of peds){if(!p.cross||!p.walking)continue;const side=Math.abs((c.vertical?p.g.position.x:p.g.position.z)-c.lane),d=((c.vertical?p.g.position.z:p.g.position.x)-c.pos)*c.dir;if(side<width+.65&&d>0)limit(d-half-.7,0,'CROSSWALK');}
+ for(const p of crossingPeds){const side=Math.abs((c.vertical?p.g.position.x:p.g.position.z)-c.lane),d=((c.vertical?p.g.position.z:p.g.position.x)-c.pos)*c.dir;if(side<width+.65&&d>0)limit(d-half-.7,0,'CROSSWALK');}
  if(running){const d=((c.vertical?pz:px)-c.pos)*c.dir,side=Math.abs((c.vertical?px:pz)-c.lane);if(d>0&&side<width+.7)limit(d-half-.75,Math.max(0,speed*(c.vertical?-Math.cos(travelHeading): -Math.sin(travelHeading))*c.dir),'RIDER');}
  // Safe merge around the double-parked delivery truck; require front and rear clearance.
  if(c.vertical&&reason==='QUEUE'&&gap<17&&v<3&&!c.mergeTo&&intersections.every(j=>Math.abs(c.pos-j)>25)){
@@ -288,20 +292,96 @@ function updateStreet(dt){
  for(const j of intersections){const distance=(j-c.pos)*c.dir;if(distance<9||distance>13)continue;const plan=turnPlan(c,j);if(!plan)continue;
  const q=signalAt(plan.x,plan.z);if((c.vertical?q.vertical:q.horizontal)!=='green')continue;
  const busy=movers.some(o=>o!==c&&o.turn&&o.turn.key===plan.key);
- const clear=snap.every(o=>o.c===c||o.c.vertical!==plan.outVertical||Math.abs(o.lane-plan.outLane)>width+o.width+.3||Math.abs(o.pos-(plan.outVertical?plan.p2.y:plan.p2.x))>half+o.half+7);
+ const clear=laneNeighbors(plan.outVertical,plan.outLane,width+1.5+.3).every(o=>o.c===c||o.c.vertical!==plan.outVertical||Math.abs(o.lane-plan.outLane)>width+o.width+.3||Math.abs(o.pos-(plan.outVertical?plan.p2.y:plan.p2.x))>half+o.half+7);
  const walkers=peds.some(p=>p.cross&&p.walking&&Math.abs(p.avenue-plan.x)<1&&Math.abs(p.street-plan.z)<1&&Math.hypot(p.g.position.x-c.g.position.x,p.g.position.z-c.g.position.z)<5);
  if(!busy&&clear&&!walkers){c.turn=plan;c.velocity=Math.min(c.velocity,3.3);break;}}
  c.g.position.set(c.vertical?c.lane:c.pos,0,c.vertical?c.pos:c.lane);
  }
- for(const p of peds){if(p.cross){const q=signalAt(p.avenue,p.street),allowed=p.axis?q.walkV:q.walkH;
- p.walking=Math.abs(p.progress)<15.1||allowed;
- if(p.walking)p.progress+=p.dir*dt*(1.3+.12*Math.sin(p.phase));
- if(Math.abs(p.progress)>15.2){p.progress=Math.sign(p.progress)*15.2;p.dir=-Math.sign(p.progress);p.walking=false;}
+ for(const p of peds){
+ if(p.cross){const q=signalAt(p.avenue,p.street),allowed=p.axis?q.walkV:q.walkH;
+ const entering=p.progress*p.dir<0;
+ p.walking=Math.abs(p.progress)<15.1||allowed||Math.abs(p.progress)>15.3;
+ if(entering&&!allowed&&Math.abs(p.progress)<=15.3)p.walking=false;
+ if(p.walking){let d=dt*(1.3+.12*Math.sin(p.phase));if(entering&&!allowed)d=Math.min(d,Math.max(0,Math.abs(p.progress)-15.25));p.progress+=p.dir*d;}
+ if(!entering&&Math.abs(p.progress)>=15.2){p.progress=Math.sign(p.progress)*15.2;p.dir=-Math.sign(p.progress);p.walking=false;}
  p.g.position.set(p.avenue+(p.axis?12+p.offset:p.progress),0,p.street+(p.axis?p.progress:12+p.offset));p.g.rotation.y=p.axis?(p.dir===1?0:Math.PI):(p.dir===1?Math.PI/2:-Math.PI/2);
  }else{p.z+=p.dir*dt*.85;if(p.z>204){p.z=204;p.dir=-1;}if(p.z< -104){p.z=-104;p.dir=1;}p.g.position.set(p.x,0,p.z);p.g.rotation.y=p.dir===1?0:Math.PI;p.walking=true;}
- p.a.rotation.x=p.walking?Math.sin(elapsed*6+p.phase)*.4:0;p.b.rotation.x=-p.a.rotation.x;}
+ }
  const doorPhase=elapsed%13;doorAngle=smooth(doorAngle,doorPhase>3&&doorPhase<8?1.15:0,3,dt);doorPivot.rotation.y=doorAngle;hazardRing.material.opacity=doorPhase<3?.25+.35*Math.sin(elapsed*8)**2:doorAngle>.2?.6:0;
  if(Math.hypot(px+155,pz-34)<20&&doorPhase<3&&hornCooldown<=0){toast('Loading van · watch the door');tone(240,.13,.02,'triangle');hornCooldown=6;}
+}
+// Broad phase: local cells only. Narrow phase: oriented rectangles and pedestrian discs.
+// Safety is independent of route choice: proposed motion must clear every occupied body.
+// Mirrors/bumper overhangs are included; the loading truck reserves its opening door.
+let streetReady=false;
+const streetStats={blockedVehicles:0,blockedPedestrians:0,acceptedMoves:0};
+class StreetGrid{
+ constructor(){this.cells=new Map();}
+ keys(b){const rx=b.ped?b.w+.08:Math.abs(b.c)*b.w+Math.abs(b.s)*b.l+.08,rz=b.ped?b.w+.08:Math.abs(b.s)*b.w+Math.abs(b.c)*b.l+.08,out=[];for(let x=Math.floor((b.x-rx)/8);x<=Math.floor((b.x+rx)/8);x++)for(let z=Math.floor((b.z-rz)/8);z<=Math.floor((b.z+rz)/8);z++)out.push(x*4096+z);return out;}
+ add(b){b.cells=this.keys(b);for(const k of b.cells){let a=this.cells.get(k);if(!a)this.cells.set(k,a=new Set());a.add(b);}}
+ remove(b){for(const k of b.cells||[])this.cells.get(k)?.delete(b);}
+ nearby(b){const out=new Set();for(const k of this.keys(b))for(const o of this.cells.get(k)||[])if(o.owner!==b.owner)out.add(o);return out;}
+ clear(b){for(const o of this.nearby(b))if(streetOverlap(b,o))return false;return true;}
+}
+function streetBody(o,ped=false){return {owner:o,x:o.g.position.x,z:o.g.position.z,a:o.g.rotation.y,c:Math.cos(o.g.rotation.y),s:Math.sin(o.g.rotation.y),w:ped?.38:o.special?2.55:o.g.userData.halfLength?1.5:1.12,l:ped?.38:o.g.userData.halfLength?3.7:2.28,ped};}
+function streetOverlap(a,b){
+ if(a.ped&&b.ped)return (a.x-b.x)**2+(a.z-b.z)**2<(a.w+b.w+.025)**2;
+ if(a.ped||b.ped){const p=a.ped?a:b,r=a.ped?b:a,dx=p.x-r.x,dz=p.z-r.z,c=r.c,s=r.s,x=Math.abs(dx*c-dz*s),z=Math.abs(dx*s+dz*c);return Math.max(0,x-r.w)**2+Math.max(0,z-r.l)**2<(p.w+.04)**2;}
+ const ca=a.c,sa=a.s,cb=b.c,sb=b.s,dx=b.x-a.x,dz=b.z-a.z,cc=Math.abs(ca*cb+sa*sb),ss=Math.abs(ca*sb-sa*cb),pad=.06;
+ return Math.abs(dx*ca-dz*sa)<a.w+b.w*cc+b.l*ss+pad&&Math.abs(dx*sa+dz*ca)<a.l+b.w*ss+b.l*cc+pad&&Math.abs(dx*cb-dz*sb)<b.w+a.w*cc+a.l*ss+pad&&Math.abs(dx*sb+dz*cb)<b.l+a.w*ss+a.l*cc+pad;
+}
+const vehicleFields=['pos','lane','vertical','dir','velocity','mergeTo','mergeFrom','mergeTime','lastJunction','turns','reason'];
+function saveVehicle(c){const s={x:c.g.position.x,z:c.g.position.z,a:c.g.rotation.y,turn:c.turn?{...c.turn}:null};for(const k of vehicleFields)s[k]=c[k];return s;}
+function restoreVehicle(c,s){for(const k of vehicleFields)c[k]=s[k];c.turn=s.turn?{...s.turn}:null;c.g.position.set(s.x,0,s.z);c.g.rotation.y=s.a;}
+function savePed(p){return {x:p.g.position.x,z:p.g.position.z,a:p.g.rotation.y,progress:p.progress,offset:p.offset,routeX:p.x,routeZ:p.z,dir:p.dir,walking:p.walking};}
+function restorePed(p,s){p.progress=s.progress;p.offset=s.offset;p.x=s.routeX;p.z=s.routeZ;p.dir=s.dir;p.walking=s.walking;p.g.position.set(s.x,0,s.z);p.g.rotation.y=s.a;}
+function clearStreetSweep(grid,old,b){
+ const d=Math.hypot(b.x-old.x,b.z-old.z),angle=angleDiff(b.a,old.a);if(d<1e-10&&(b.ped||Math.abs(angle)<1e-10))return true;
+ // Boundary recycling is a teleport to a separately checked empty entry.
+ if(d>30)return grid.clear(b);
+ const n=Math.max(1,Math.ceil((d+Math.abs(angle)*Math.hypot(b.w,b.l))/.12));
+ const q={...b};for(let i=1;i<=n;i++){q.x=old.x+(b.x-old.x)*i/n;q.z=old.z+(b.z-old.z)*i/n;q.a=old.a+angle*i/n;q.c=Math.cos(q.a);q.s=Math.sin(q.a);if(!grid.clear(q))return false;}return true;
+}
+function initializeStreet(){
+ const grid=new StreetGrid();
+ // Parked obstacles first; all moving vehicles spawn only into empty footprints.
+ for(const c of traffic.filter(c=>c.parked)){grid.add(streetBody(c));}
+ for(const c of traffic.filter(c=>!c.parked)){
+ c.g.rotation.y=c.vertical?(c.dir<0?0:Math.PI):(c.dir>0?-Math.PI/2:Math.PI/2);
+ let ok=false;for(let i=0;i<2000;i++){c.g.position.set(c.vertical?c.lane:c.pos,0,c.vertical?c.pos:c.lane);const b=streetBody(c);if(grid.clear(b)){grid.add(b);ok=true;break;}c.pos-=c.dir*.8;}if(!ok)throw Error('No safe vehicle spawn');
+ }
+ for(let i=0;i<peds.length;i++){const p=peds[i];p.walking=false;
+ if(p.cross)p.progress=(i%2?1:-1)*15.25;
+ let ok=false;for(let n=0;n<3000;n++){
+ if(p.cross){p.g.position.set(p.avenue+(p.axis?12+p.offset:p.progress),0,p.street+(p.axis?p.progress:12+p.offset));}else p.g.position.set(p.x,0,p.z);
+ const b=streetBody(p,true);if(grid.clear(b)){grid.add(b);ok=true;break;}
+ if(p.cross)p.progress-=p.dir*.8;else p.z+=.8;
+ }if(!ok)throw Error('No safe pedestrian spawn');
+ }
+ streetReady=true;
+}
+function updateStreet(dt){
+ if(!streetReady)initializeStreet();
+ const before=traffic.map(saveVehicle),pedBefore=peds.map(savePed);
+ proposeStreet(dt);
+ const after=traffic.map(saveVehicle),pedAfter=peds.map(savePed),grid=new StreetGrid(),bodies=[];
+ traffic.forEach((c,i)=>{restoreVehicle(c,before[i]);const b=streetBody(c);bodies.push(b);grid.add(b);});
+ const pedBodies=peds.map((p,i)=>{restorePed(p,pedBefore[i]);const b=streetBody(p,true);grid.add(b);return b;});
+ traffic.forEach((c,i)=>{if(c.parked)return;const old=bodies[i];grid.remove(old);restoreVehicle(c,after[i]);let b=streetBody(c);
+ if(!clearStreetSweep(grid,old,b)){restoreVehicle(c,before[i]);c.velocity=0;c.reason='YIELD / OCCUPIED SPACE';streetStats.blockedVehicles++;b=old;}else streetStats.acceptedMoves++;
+ grid.add(b);});
+ // Alternate priority so neither direction owns the pavement. Try a small sidestep
+ // when blocked; unlike overlap repulsion this never pushes someone into a vehicle.
+ const reverse=Math.floor(elapsed*2)%2;for(let j=0;j<peds.length;j++){const i=reverse?peds.length-1-j:j,p=peds[i],old=pedBodies[i],prev=pedBefore[i],next=pedAfter[i];grid.remove(old);restorePed(p,next);let b=streetBody(p,true),ok=clearStreetSweep(grid,old,b);
+ if(!ok&&dt>0){for(const side of [p.dir,-p.dir]){
+ restorePed(p,prev);const step=side*.85*dt;
+ if(p.cross){p.offset=T.MathUtils.clamp(p.offset+step,-2.2,2.2);if(p.axis)p.g.position.x=p.avenue+12+p.offset;else p.g.position.z=p.street+12+p.offset;}
+ else{const av=avenues[Math.abs(p.x-avenues[0])<Math.abs(p.x-avenues[1])?0:1],sign=Math.sign(p.x-av);p.x=av+sign*T.MathUtils.clamp(Math.abs(p.x-av)+step,12.5,16.5);p.g.position.x=p.x;}
+ b=streetBody(p,true);if(clearStreetSweep(grid,old,b)&&Math.hypot(b.x-old.x,b.z-old.z)>.0001){ok=true;break;}
+ }}
+ if(!ok){restorePed(p,prev);p.walking=false;b=old;streetStats.blockedPedestrians++;}else p.walking=Math.hypot(b.x-old.x,b.z-old.z)>.00001;
+ grid.add(b);p.a.rotation.x=p.walking?Math.sin(elapsed*6+p.phase)*.4:0;p.b.rotation.x=-p.a.rotation.x;
+ }
 }
 function update(dt){if(!running)return;elapsed+=dt;time=practice?120:Math.max(0,time-dt);cooldown=Math.max(0,cooldown-dt);recovering=Math.max(0,recovering-dt);hornCooldown=Math.max(0,hornCooldown-dt);slideCooldown=Math.max(0,slideCooldown-dt);impactShake=Math.max(0,impactShake-dt);toastTime-=dt;if(toastTime<0)$('toast').classList.remove('visible');updateStreet(dt);
  const pedalOn=keys.KeyW||keys.ArrowUp,brake=keys.KeyS||keys.ArrowDown,sprint=(keys.ShiftLeft||keys.ShiftRight)&&stamina>1&&pedalOn&&!brake&&!slideActive&&!keys.Space;const steer=(keys.KeyA||keys.ArrowLeft?1:0)-(keys.KeyD||keys.ArrowRight?1:0);steerSmooth=smooth(steerSmooth,steer,steer*steerSmooth<0?20:14,dt);
