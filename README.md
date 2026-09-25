@@ -1,29 +1,31 @@
 # Midtown Dispatch
 
-A self-contained browser game about riding a fixed-gear delivery bike through busy city traffic.
-
 Play: https://hellomarcog.github.io/midtown-dispatch/
 
-## Living Streets / 09
+A self-contained fixed-gear bike messenger game. **Living Streets / 10** opens directly in the city, with the rider standing beside the bike. Hold W to walk forward, mount, and pedal.
 
-- Oriented vehicle collision footprints cover truck mirrors and bumpers, including during turns and merges.
-- Pedestrian discs cannot overlap each other or vehicle footprints. Blocked walkers wait or take small safe sidesteps.
-- Vehicle and pedestrian spawns are placed into clear space; recycled traffic checks its destination before re-entry.
-- Each proposed movement is checked along its path before being committed. Blocked vehicles retain their previous route state and stop.
-- Spatial cells and lane buckets limit collision and traffic queries to relevant neighbors.
-- Traffic density remains 288 vehicles (including parked vehicles) and 320 pedestrians.
+## Build 10
 
-Traffic uses simplified IDM-style following, signals, junction clearance, and a custom geometric safety layer. Pedestrian avoidance is custom, not a full ORCA implementation or a calibrated city simulator.
+- Quicker effort ramp and stronger launch; releasing W eases effort down while wheel-driven fixed-gear pedaling continues until the bike stops.
+- Walk-and-mount opening animation with articulated limbs. Free city riding starts immediately; T starts the timed delivery.
+- One-way local streets and avenue, with wider two-way streets and a four-lane two-way avenue. Route and merge rules respect direction.
+- Most pedestrians use sidewalk corridors. Others use controlled crossings; a small group jaywalks midblock.
+- 24 other cyclists with animated cranks, legs, and wheels, integrated into signals and collision checks.
+- Compacts, sedans, SUVs, minivans, and box trucks with size-matched collision footprints.
+- Sidewalk trees and planters, plus three construction sites with barriers and traffic yielding/merging.
+- High graphics selected by default for modern computers; lower settings remain available in the menu.
+
+The city contains 288 motor vehicles (including parked vehicles), 24 cyclists, and 320 pedestrians. Traffic uses simplified IDM following plus custom path and footprint collision checks; it is not a calibrated city simulator or full ORCA implementation.
 
 ## Controls
 
 W pedal · A/D steer · S brake · Shift sprint · Space skid · E deliver.
-V side view · P practice · C center camera · R recover · T retry.
+V side view · P restart free ride · C center camera · R recover · T timed delivery · Escape pause.
 
 ## Run and test
 
-Open `index.html` in a browser with WebGL enabled. No build step or external assets are required.
+Open `index.html` in a WebGL-enabled browser. No build step or external assets are required.
 
-Run `node tests/collisions.cjs` for a seeded 180-second simulation with mixed timesteps. It checks initial placement and all three NPC overlap classes at every step, and requires ongoing movement and completed turns. The harness uses the game's actual simulation code with simplified rendering objects; it does not measure GPU rendering or visual performance.
+Run `node tests/build10.cjs` (or `node tests/collisions.cjs`). The harness loads the full application and real Three.js geometry, replacing only browser DOM/canvas and GPU rendering. It checks city startup, mount limb lengths, acceleration, continued pedal rotation after W release, eventual stopping, sidewalk placement, and all NPC/fixture collision classes over at least 180 simulated seconds. `SIM_SECONDS` overrides the final city-test duration.
 
-GitHub Pages deploys `main` from the repository root. Three.js retains its MIT license in `index.html`.
+The test does not measure GPU performance or replace visual playtesting. GitHub Pages deploys `main` from the repository root. The embedded Three.js MIT license is retained.
